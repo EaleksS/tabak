@@ -1,0 +1,48 @@
+@import "/src/app/styles/variables";
+
+.contact_right {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  background: rgba($color: $black, $alpha: 0.75);
+  height: 100vh;
+
+  @media (max-width: 1500px) {
+    display: none;
+  }
+
+  .line {
+    width: 2px;
+    height: 100px;
+    background: #fff;
+  }
+
+  p {
+    writing-mode: vertical-lr;
+    transform: scale(-1);
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .icon {
+    font-size: 25px;
+
+    @media (min-width: 800px) {
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: $gold;
+      }
+    }
+  }
+}

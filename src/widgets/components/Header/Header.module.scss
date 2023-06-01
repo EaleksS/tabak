@@ -1,0 +1,144 @@
+@import "/src/app/styles/variables";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  position: relative;
+  z-index: 5;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    gap: 1rem;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .phone {
+      display: flex !important;
+
+      li:nth-child(1) {
+        // border: 2px solid transparent;
+        border-bottom: 2px solid $gold;
+        padding: 0 5px;
+
+        @media (min-width: 800px) {
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            border-color: #fff;
+            background: $gold;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
+
+      @media (max-width: 992px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      li {
+        cursor: pointer;
+
+        @media (min-width: 800px) {
+          transform: all 0.2s ease-in-out;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+.burger_menu {
+  position: relative;
+  width: 2rem;
+  height: 1.5rem;
+  user-select: none;
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: 1200px) {
+    display: block;
+  }
+
+  .l1,
+  .l2,
+  .l3 {
+    position: absolute;
+    height: 1px;
+    width: 2rem;
+    border-top: 1px solid #fff;
+    left: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .l1 {
+    top: 0;
+  }
+
+  .l2 {
+    top: calc(50% - 1px);
+  }
+
+  .l3 {
+    bottom: 0;
+  }
+
+  &.active {
+    .l1 {
+      transform: translateY(0.7rem) rotate(-45deg);
+    }
+
+    .l2 {
+      opacity: 0;
+    }
+
+    .l3 {
+      transform: translateY(-0.7rem) rotate(45deg);
+    }
+  }
+}

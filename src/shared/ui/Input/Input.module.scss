@@ -1,0 +1,44 @@
+@import "/src/app/styles/variables";
+
+.label {
+  background: rgba($color: #333, $alpha: 0.05);
+  // border: 1px solid $gold;
+  height: 50px;
+  display: grid;
+  align-items: center;
+  padding: 0 20px;
+  overflow: hidden;
+
+  img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.5;
+  }
+
+  div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      font-weight: 400;
+      font-size: 16px;
+      outline: none;
+      height: 100%;
+      border: 0;
+      background: transparent;
+      color: #333;
+    }
+
+    textarea {
+      font-weight: 400;
+      font-size: 16px;
+      outline: none;
+      border: 0;
+      background: transparent;
+      resize: none;
+      width: 100%;
+      color: #333;
+    }
+  }
+}

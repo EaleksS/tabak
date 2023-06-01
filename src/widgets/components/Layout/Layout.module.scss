@@ -1,0 +1,39 @@
+@import "/src/app/styles/variables";
+
+.wrapper {
+  overflow-x: hidden;
+
+  @media (max-width: 1200px) {
+    padding: 0 1rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: url("/img/1.jpg") no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba($color: #333333, $alpha: 0.85);
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 0 1rem;
+  }
+}

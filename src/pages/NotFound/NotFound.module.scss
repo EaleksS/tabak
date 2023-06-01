@@ -1,0 +1,21 @@
+@import "/src/app/styles/variables";
+
+.not_found {
+  height: calc(100vh - 100px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+
+  h1 {
+    font-size: 200px;
+    line-height: 200px;
+  }
+
+  h2 {
+    font-weight: 600;
+  }
+}

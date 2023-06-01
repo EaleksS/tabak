@@ -1,0 +1,15 @@
+.footer {
+  .cont {
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #565656;
+    height: 78px;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}

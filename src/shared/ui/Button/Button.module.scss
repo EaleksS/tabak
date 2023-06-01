@@ -1,0 +1,50 @@
+@import "/src/app/styles/variables";
+
+.btn {
+  height: 50px;
+  border: 0;
+
+  background: transparent;
+  cursor: pointer;
+  padding: 0 16px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+
+  position: relative;
+  opacity: 0.5;
+  cursor: not-allowed;
+
+  &.active {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &.def {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.default {
+  transition: all 0.2s ease-in-out;
+  background-color: $gold;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  text-transform: uppercase;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  @media (min-width: 800px) {
+    &:hover {
+      background-color: rgba($color: $gold, $alpha: 0.6);
+    }
+  }
+}
