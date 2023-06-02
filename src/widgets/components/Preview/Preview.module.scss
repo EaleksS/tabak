@@ -19,8 +19,32 @@
       display: none;
     }
 
+    .img1,
+    .img2,
+    .img3,
+    .img4,
+    .img5 {
+      position: absolute;
+      top: 0;
+      right: 10rem;
+      width: 200px;
+    }
+
     .img1 {
-      width: 100%;
+      transform: translate(0, -20rem);
+    }
+
+    .img2 {
+      transform: translate(0, -15rem);
+    }
+    .img3 {
+      transform: translate(0, -10rem);
+    }
+    .img4 {
+      transform: translate(0, -5rem);
+    }
+    .img5 {
+      transform: translate(0, 0);
     }
   }
 }
