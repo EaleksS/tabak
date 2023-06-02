@@ -4,13 +4,11 @@ import { Text } from "../../../shared";
 
 export const Footer: FC = (): JSX.Element => {
   return (
-    <footer className={`${styles.footer} wrapper`} id="footer">
-      <div className={styles.cont}>
+    <footer className={`${styles.footer}`} id="footer">
+      <div className={`${styles.cont} wrapper`}>
         <Text type="p5" color="#989898" fz="12px">
-          (с) Все права защищены. Большой театр. 2020
-        </Text>
-        <Text type="p5" color="#989898" fz="12px">
-          Разработано d-e-n.ru
+          © 2023 TOBACCO. ВСЕ ПРАВА ЗАЩИЩЕНЫ. САЙТ ПРЕДНАЗНАЧЕН ДЛЯ ЛИЦ СТАРШЕ
+          18 ЛЕТ. РАЗРАБОТЧИКИ WEB-DOMINANCE
         </Text>
       </div>
     </footer>

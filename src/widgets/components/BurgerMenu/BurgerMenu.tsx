@@ -1,21 +1,13 @@
 import { FC, useEffect, useRef, useState } from "react";
 import styles from "./BurgerMenu.module.scss";
-import { Modal } from "../../../entities";
+import { Modal, Nav } from "../../../entities";
 import { useBurgerMenu } from "../../store/burgerMenu.store";
 import { Link } from "react-scroll";
-import { useNavigate } from "react-router-dom";
-import { Text } from "../../../shared";
 import { FiInstagram } from "react-icons/fi";
 import { FaFacebookF, FaVk, FaYoutube } from "react-icons/fa";
 
 export const BurgerMenu: FC = (): JSX.Element => {
   const { isActive, setIsActive } = useBurgerMenu();
-  const navigate = useNavigate();
-
-  const close = () => {
-    setIsActive(false);
-    navigate("/");
-  };
 
   useEffect(() => {
     if (isActive) {
@@ -43,43 +35,7 @@ export const BurgerMenu: FC = (): JSX.Element => {
       <Modal isActive={isActive} setIsActive={setIsActive}>
         <div className={styles.burger_menu}>
           <nav>
-            <ul>
-              <li>
-                <Link to="wrapper" smooth={true} onClick={close}>
-                  <Text type="p2" color="#fff">
-                    Главная
-                  </Text>
-                </Link>
-              </li>
-              <li>
-                <Link to="about" smooth={true} onClick={close}>
-                  <Text type="p2" color="#fff">
-                    о театре
-                  </Text>
-                </Link>
-              </li>
-              <li>
-                <Link to="productions" smooth={true} onClick={close}>
-                  <Text type="p2" color="#fff">
-                    Наши постановки
-                  </Text>
-                </Link>
-              </li>
-              <li>
-                <Link to="partners" smooth={true} onClick={close}>
-                  <Text type="p2" color="#fff">
-                    партнеры театра
-                  </Text>
-                </Link>
-              </li>
-              <li>
-                <Link to="contacts" smooth={true} onClick={close}>
-                  <Text type="p2" color="#fff">
-                    контакты
-                  </Text>
-                </Link>
-              </li>
-            </ul>
+            <Nav setIsActive={setIsActive} />
           </nav>
           <div className={styles.social}>
             <Link to=".#">

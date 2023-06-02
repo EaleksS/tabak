@@ -4,6 +4,8 @@ import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 import { ContactLeft, Up } from "../../../entities";
 import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
+import { ContactsForm } from "../ContactsForm/ContactsForm";
+import { DocumentModal } from "../DocumentModal/DocumentModal";
 
 interface Props {
   children: ReactNode;
@@ -13,6 +15,8 @@ export const Layout: FC<Props> = ({ children }): JSX.Element => {
   return (
     <div className={styles.wrapper} id="wrapper">
       <BurgerMenu />
+      <ContactsForm />
+      <DocumentModal />
       <ContactLeft />
       <Header />
       <main className={styles.main}>{children}</main>

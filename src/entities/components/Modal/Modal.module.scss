@@ -12,8 +12,6 @@
 
   backdrop-filter: blur(1rem);
 
-  z-index: 4;
-
   opacity: 0;
   pointer-events: none;
 
@@ -29,7 +27,7 @@
 
     transition: all 0.2s ease-in-out;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 800px) {
       width: 100vw;
       height: 100vh;
       background: $black;

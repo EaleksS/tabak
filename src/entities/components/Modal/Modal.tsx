@@ -5,16 +5,19 @@ interface Props {
   isActive: boolean;
   setIsActive: (bool: boolean) => void;
   children: ReactNode;
+  zIndex?: number;
 }
 
 export const Modal: FC<Props> = ({
   isActive,
   setIsActive,
   children,
+  zIndex = 4,
 }): JSX.Element => {
   return (
     <div
       className={`${styles.modal} ${isActive && styles.active}`}
+      style={{ zIndex: zIndex }}
       onClick={() => setIsActive(false)}
     >
       <div

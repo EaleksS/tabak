@@ -1,5 +1,12 @@
 import { FC } from "react";
-import { About, Contacts, Layout, Preview, Products } from "../../widgets";
+import {
+  About,
+  Contacts,
+  Documents,
+  Layout,
+  Preview,
+  Products,
+} from "../../widgets";
 // import styles from "./Main.module.scss";
 
 export const Main: FC = (): JSX.Element => {
@@ -8,6 +15,7 @@ export const Main: FC = (): JSX.Element => {
       <Preview />
       <Products />
       <About />
+      <Documents />
       <Contacts />
     </Layout>
   );

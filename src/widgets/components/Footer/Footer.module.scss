@@ -1,15 +1,11 @@
 .footer {
+  background: #333;
+
   .cont {
     margin-top: 6rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid #565656;
+    justify-content: center;
     height: 78px;
-
-    @media (max-width: 500px) {
-      flex-direction: column;
-      justify-content: center;
-    }
   }
 }
