@@ -1,0 +1,22 @@
+.confirmation {
+  width: 100vw;
+  height: 100vh;
+  background: rgba($color: #fff, $alpha: 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    width: 800px;
+
+    a {
+      color: #333;
+    }
+
+    .btns {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}

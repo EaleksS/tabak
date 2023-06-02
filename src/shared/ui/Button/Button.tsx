@@ -20,7 +20,7 @@ export const Button: FC<Props> = ({
     case "primary":
       return (
         <button
-          className={`${styles.btn} ${styles.default} ${
+          className={`${styles.btn} ${styles.primary} ${
             isActive && styles.active
           } ${isActive === undefined && styles.def}`}
           style={{ marginTop: mt }}
