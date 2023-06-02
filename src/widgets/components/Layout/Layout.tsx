@@ -2,7 +2,7 @@ import { FC, ReactNode } from "react";
 import styles from "./Layout.module.scss";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
-import { ContactLeft, Up } from "../../../entities";
+import { Up } from "../../../entities";
 import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
 import { ContactsForm } from "../ContactsForm/ContactsForm";
 import { DocumentModal } from "../DocumentModal/DocumentModal";
@@ -17,7 +17,6 @@ export const Layout: FC<Props> = ({ children }): JSX.Element => {
       <BurgerMenu />
       <ContactsForm />
       <DocumentModal />
-      <ContactLeft />
       <Header />
       <main className={styles.main}>{children}</main>
       <Footer />
