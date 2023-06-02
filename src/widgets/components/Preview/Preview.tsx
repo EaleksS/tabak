@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef } from "react";
 import styles from "./Preview.module.scss";
 import { Button, Text } from "../../../shared";
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export const Preview: FC = (): JSX.Element => {
   const img1 = useRef<HTMLImageElement>(null);
