@@ -1,7 +1,44 @@
+@import "/src/app/styles/variables";
+
 .documents {
   padding-top: 100px;
 
-  h2 {
-    text-align: center;
+  .title {
+    position: relative;
+
+    h2 {
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .back {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: rgba($color: #333, $alpha: 0.1);
+      font-size: 100px;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .line {
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 200px;
+      margin: 0 auto;
+      height: 2px;
+      background: $gold;
+    }
   }
 }

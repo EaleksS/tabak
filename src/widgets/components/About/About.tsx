@@ -1,15 +1,44 @@
 import { FC } from "react";
 import styles from "./About.module.scss";
 import { Text } from "../../../shared";
+import { Variants, motion } from "framer-motion";
+
+const cardVariants: Variants = {
+  offscreen: {
+    y: 100,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    rotate: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
 
 export const About: FC = (): JSX.Element => {
   return (
-    <div className={`${styles.about} `} id="about">
-      <Text type="h2" color="#fff">
-        <span>о</span> компании
-      </Text>
+    <motion.div
+      className={`${styles.about} `}
+      id="about"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+      variants={cardVariants}
+    >
+      <div className={styles.title}>
+        <Text type="h2" color="#fff">
+          <span>о</span> компании
+        </Text>
+        <div className={styles.back}>about</div>
+        <div className={styles.line}></div>
+      </div>
       <div className={`${styles.items} wrapper`}>
-        <div className={styles.title}>
+        <div className={styles.title2}>
           <Text color="#fff">Производство табачных изделий</Text>
           <Text type="p4" mt="40px" color="#fff">
             Купить Табак «Табак-спб.рф» — это поставщик первоклассного и
@@ -50,6 +79,6 @@ export const About: FC = (): JSX.Element => {
           <img src="/pre.jpg" alt="img" />
         </div> */}
       </div>
-    </div>
+    </motion.div>
   );
 };

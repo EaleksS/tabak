@@ -7,10 +7,13 @@ import { Card2 } from "../../../entities";
 export const Products: FC = (): JSX.Element => {
   return (
     <div className={`${styles.products} wrapper`} id="products">
-      <Text type="h2">
-        <span>наша</span> продукция <br />
-        Жевательный <span>табак</span>
-      </Text>
+      <div className={styles.title}>
+        <Text type="h2">
+          Жевательный <span>табак</span>
+        </Text>
+        <div className={styles.back}>products</div>
+        <div className={styles.line}></div>
+      </div>
       <div className={styles.items}>
         {[1, 2, 3, 4, 5].map((e) => (
           <Card2 key={e} />

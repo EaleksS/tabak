@@ -110,7 +110,7 @@ export const Preview: FC = (): JSX.Element => {
         </Text>
         <Button mt="3rem">
           <Text type="p2" color="#fff">
-            продукция
+            подробнее
           </Text>
         </Button>
       </motion.div>
