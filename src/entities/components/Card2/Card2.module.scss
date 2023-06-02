@@ -1,0 +1,53 @@
+@import "/src/app/styles/variables";
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  background: rgba($color: $gold, $alpha: 0.1);
+  box-shadow: 0px 0px 8px 0px rgba($color: $gold, $alpha: 0.2);
+  border-radius: 10px;
+  position: relative;
+
+  .info {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+
+    display: flex;
+    gap: 1rem;
+
+    .g {
+      width: 70px;
+      background: #ed453b;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      color: #fff;
+    }
+  }
+
+  .img {
+    position: relative;
+
+    img {
+      object-fit: cover;
+      width: 250px;
+    }
+
+    .green {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    .jerry {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100px;
+    }
+  }
+}
