@@ -21,31 +21,41 @@ export const Preview: FC = (): JSX.Element => {
       return;
 
     // const moving_value1 = Number(img1.current?.alt);
-    const moving_value2 = Number(img2.current?.alt);
-    const moving_value3 = Number(img3.current?.alt);
-    const moving_value4 = Number(img4.current?.alt);
-    const moving_value5 = Number(img5.current?.alt);
+    // const moving_value2 = Number(img2.current?.alt);
+    // const moving_value3 = Number(img3.current?.alt);
+    // const moving_value4 = Number(img4.current?.alt);
+    // const moving_value5 = Number(img5.current?.alt);
 
-    const x1 = (e.clientX * 10) / 5000;
-    // const y1 = (e.clientY * moving_value1) / 100;
+    const x1 = e.clientX / 1000;
+    const y1 = e.clientY / 500;
 
-    const x2 = (e.clientX * moving_value2) / 2000;
-    // const y2 = (e.clientY * moving_value2) / 100;
+    const x2 = e.clientX / 1000;
+    const y2 = e.clientY / 500;
 
-    const x3 = (e.clientX * moving_value3) / 2000;
-    // const y3 = (e.clientY * moving_value3) / 100;
+    const x3 = e.clientX / 1000;
+    const y3 = e.clientY / 500;
 
-    const x4 = (e.clientX * moving_value4) / 2000;
-    // const y4 = (e.clientY * moving_value4) / 100;
+    const x4 = e.clientX / 1000;
+    const y4 = e.clientY / 500;
 
-    const x5 = (e.clientX * moving_value5) / 2000;
-    // const y5 = (e.clientY * moving_value5) / 100;
+    const x5 = e.clientX / 1000;
+    const y5 = e.clientY / 500;
 
-    img1.current.style.transform = `translateX(${x1}rem) translateY(${-20}rem)`;
-    img2.current.style.transform = `translateX(${-x2}rem) translateY(${-15}rem)`;
-    img3.current.style.transform = `translateX(${x3}rem) translateY(${-10}rem)`;
-    img4.current.style.transform = `translateX(${-x4}rem) translateY(${-5}rem)`;
-    img5.current.style.transform = `translateX(${x5}rem) translateY(${0}rem)`;
+    img1.current.style.transform = `translateX(${x1}rem) translateY(${
+      -20 + y1
+    }rem)`;
+    img2.current.style.transform = `translateX(${-x2}rem) translateY(${
+      -15 + y2
+    }rem)`;
+    img3.current.style.transform = `translateX(${x3}rem) translateY(${
+      -10 + y3
+    }rem)`;
+    img4.current.style.transform = `translateX(${-x4}rem) translateY(${
+      -5 + y4
+    }rem)`;
+    img5.current.style.transform = `translateX(${x5}rem) translateY(${
+      0 + y5
+    }rem)`;
   };
 
   useEffect(() => {
