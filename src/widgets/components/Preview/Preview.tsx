@@ -80,8 +80,8 @@ export const Preview: FC = (): JSX.Element => {
         <img ref={img1} src="/img/2-6.png" alt="1" className={styles.img1} />
         <img ref={img2} src="/img/2-6.png" alt="2" className={styles.img2} />
         <img ref={img3} src="/img/2-6.png" alt="3" className={styles.img3} />
-        <img ref={img5} src="/img/2-6.png" alt="5" className={styles.img4} />
-        <img ref={img4} src="/img/2-6.png" alt="4" className={styles.img5} />
+        <img ref={img4} src="/img/2-6.png" alt="5" className={styles.img4} />
+        <img ref={img5} src="/img/2-6.png" alt="4" className={styles.img5} />
       </div>
     </div>
   );
