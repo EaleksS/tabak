@@ -3,7 +3,6 @@ import {
   About,
   Contacts,
   Documents,
-  FaqC,
   Layout,
   Preview,
   Products,
@@ -15,7 +14,6 @@ export const Main: FC = (): JSX.Element => {
     <Layout>
       <Preview />
       <Products />
-      {/* <FaqC /> */}
       <About />
       <Documents />
       <Contacts />
