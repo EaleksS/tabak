@@ -69,7 +69,7 @@ export const Card2: FC = (): JSX.Element => {
         />
         <img
           ref={img2}
-          src="/img/jerry.png"
+          src="/img/kiwi.png"
           alt="img"
           className={styles.jerry}
         />

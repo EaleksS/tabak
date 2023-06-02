@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef } from "react";
 import styles from "./Preview.module.scss";
 import { Button, Text } from "../../../shared";
-import { motion } from "framer-motion";
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 
 export const Preview: FC = (): JSX.Element => {
   const img1 = useRef<HTMLImageElement>(null);
@@ -58,6 +58,34 @@ export const Preview: FC = (): JSX.Element => {
     }rem)`;
   };
 
+  const data = [
+    {
+      ref: img1,
+      css: styles.img1,
+      id: 1,
+    },
+    {
+      ref: img2,
+      css: styles.img2,
+      id: 1,
+    },
+    {
+      ref: img3,
+      css: styles.img3,
+      id: 1,
+    },
+    {
+      ref: img4,
+      css: styles.img4,
+      id: 1,
+    },
+    {
+      ref: img5,
+      css: styles.img5,
+      id: 1,
+    },
+  ];
+
   useEffect(() => {
     document.addEventListener("mousemove", parallax);
 
@@ -87,12 +115,25 @@ export const Preview: FC = (): JSX.Element => {
         </Button>
       </motion.div>
       <div className={styles.img}>
-        <img ref={img1} src="/img/2-6.png" alt="1" className={styles.img1} />
-        <img ref={img2} src="/img/2-6.png" alt="2" className={styles.img2} />
-        <img ref={img3} src="/img/2-6.png" alt="3" className={styles.img3} />
-        <img ref={img4} src="/img/2-6.png" alt="5" className={styles.img4} />
-        <img ref={img5} src="/img/2-6.png" alt="4" className={styles.img5} />
+        <AnimatePresence>
+          {data.map((e) => (
+            <motion.img
+              key={e.id}
+              ref={e.ref}
+              src="/img/2-6.png"
+              alt="2"
+              className={e.css}
+              initial={{ opacity: 0, marginTop: "200px" }}
+              animate={{ opacity: 1, marginTop: "0" }}
+              transition={{ delay: e.id * 1 }}
+            />
+          ))}
+        </AnimatePresence>
       </div>
+      {/* <div className={styles.parallax_text}>
+        <ParallaxText baseVelocity={-5}>Framer Motion</ParallaxText>
+        <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
+      </div> */}
     </div>
   );
 };

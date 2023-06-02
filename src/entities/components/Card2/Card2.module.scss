@@ -9,6 +9,14 @@
   border-radius: 10px;
   position: relative;
 
+  @media (min-width: 800px) {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
   .info {
     position: absolute;
     bottom: 1rem;
@@ -45,9 +53,9 @@
 
     .jerry {
       position: absolute;
-      left: 0;
-      top: 0;
-      width: 100px;
+      right: 0;
+      bottom: 0;
+      width: 120px;
     }
   }
 }
