@@ -2,6 +2,7 @@
   width: 600px;
   background: #fff;
   padding: 1rem;
+  border-radius: 10px;
 
   .close {
     display: none;
@@ -11,6 +12,11 @@
     font-size: 30px;
     cursor: pointer;
     color: red;
+  }
+
+  button,
+  label {
+    border-radius: 5px;
   }
 
   @media (max-width: 800px) {
