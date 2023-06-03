@@ -99,6 +99,10 @@ export const Contacts: FC = (): JSX.Element => {
           <Text type="p3" mt="1rem" fw="400" color="#333">
             ООО Афина ИНН 7816733929
           </Text>
+          <Text type="p5" fw="500">
+            Компания
+          </Text>
+
           <Text type="p3" mt=".5rem" fw="400" color="#333">
             192236, г Санкт-Петербург, ул Белы Куна, Д 32
           </Text>
