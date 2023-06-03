@@ -120,7 +120,7 @@ export const Preview: FC = (): JSX.Element => {
             <motion.img
               key={index + 100}
               ref={e.ref}
-              src="/img/2-6.png"
+              src={`/img/2-${6 + index}.png`}
               alt="2"
               className={e.css}
               initial={{ opacity: 0, marginTop: "200px" }}

@@ -3,7 +3,14 @@ import styles from "./Card2.module.scss";
 import { Text } from "../../../shared";
 import { Variants, motion } from "framer-motion";
 
-export const Card2: FC = (): JSX.Element => {
+interface Props {
+  url: string;
+  fruit: string;
+  title: string;
+  desc: string;
+}
+
+export const Card2: FC<Props> = ({ url, fruit, title, desc }): JSX.Element => {
   const img1 = useRef<HTMLImageElement>(null);
   const img2 = useRef<HTMLImageElement>(null);
   const img3 = useRef<HTMLImageElement>(null);
@@ -60,26 +67,18 @@ export const Card2: FC = (): JSX.Element => {
       viewport={{ once: true, amount: 0.8 }}
     >
       <motion.div className={styles.img} variants={cardVariants}>
-        <img ref={img3} src="/img/2-6.png" alt="img" />
+        <img ref={img3} src={url} alt="img" />
         <img
           ref={img1}
           src="/img/green.png"
           alt="img"
           className={styles.green}
         />
-        <img
-          ref={img2}
-          src="/img/kiwi.png"
-          alt="img"
-          className={styles.jerry}
-        />
+        <img ref={img2} src={fruit} alt="img" className={styles.jerry} />
       </motion.div>
       <div className={styles.content}>
-        <Text type="h3">ODEN’S COLD DRY</Text>
-        <Text type="p4">
-          Идеальный баланс шведской классики и современной практичности.
-          Умеренный уровень крепости даёт полный контроль над эйфорией.
-        </Text>
+        <Text type="h3">{title}</Text>
+        <Text type="p4">{desc}</Text>
         <div className={styles.info}>
           <div className={styles.g} style={{ background: "#222222" }}>
             13 г
