@@ -2,9 +2,6 @@ import { FC, useEffect, useRef, useState } from "react";
 import styles from "./BurgerMenu.module.scss";
 import { Modal, Nav } from "../../../entities";
 import { useBurgerMenu } from "../../store/burgerMenu.store";
-import { Link } from "react-scroll";
-import { FiInstagram } from "react-icons/fi";
-import { FaFacebookF, FaVk, FaYoutube } from "react-icons/fa";
 import { Text } from "../../../shared";
 
 export const BurgerMenu: FC = (): JSX.Element => {
