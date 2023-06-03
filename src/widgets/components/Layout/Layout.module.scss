@@ -3,10 +3,6 @@
 .wrapper {
   overflow-x: hidden;
 
-  @media (max-width: 1200px) {
-    padding: 0 1rem;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -31,9 +27,5 @@
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-  }
-
-  @media (max-width: 1200px) {
-    padding: 0 1rem;
   }
 }

@@ -5,6 +5,7 @@ import { useBurgerMenu } from "../../store/burgerMenu.store";
 import { Link } from "react-scroll";
 import { FiInstagram } from "react-icons/fi";
 import { FaFacebookF, FaVk, FaYoutube } from "react-icons/fa";
+import { Text } from "../../../shared";
 
 export const BurgerMenu: FC = (): JSX.Element => {
   const { isActive, setIsActive } = useBurgerMenu();
@@ -37,20 +38,15 @@ export const BurgerMenu: FC = (): JSX.Element => {
           <nav>
             <Nav setIsActive={setIsActive} />
           </nav>
-          <div className={styles.social}>
-            <Link to=".#">
-              <FiInstagram className={styles.icon} />
-            </Link>
-            <Link to=".#">
-              <FaFacebookF className={styles.icon} />
-            </Link>
-            <Link to=".#">
-              <FaVk className={styles.icon} />
-            </Link>
-            <Link to=".#">
-              <FaYoutube className={styles.icon} />
-            </Link>
-          </div>
+          <ul className={styles.phone}>
+            <li>
+              <a href="#">
+                <Text type="p2" color="#fff">
+                  +7 (999) 999-99-99
+                </Text>
+              </a>
+            </li>
+          </ul>
         </div>
       </Modal>
     </>

@@ -1,7 +1,7 @@
 @import "/src/app/styles/variables";
 
 .products {
-  padding: 50px 0;
+  padding-top: 100px !important;
 
   .title {
     position: relative;
@@ -25,6 +25,10 @@
       font-size: 100px;
       text-transform: uppercase;
       font-weight: 900;
+
+      @media (max-width: 700px) {
+        display: none;
+      }
     }
 
     .line {
@@ -47,6 +51,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 

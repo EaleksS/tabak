@@ -27,7 +27,7 @@ export const Documents: FC = (): JSX.Element => {
       className={`${styles.documents} wrapper`}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={cardVariants}
     >
       <div className={styles.title}>

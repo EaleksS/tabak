@@ -27,7 +27,7 @@ export const About: FC = (): JSX.Element => {
       id="about"
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={cardVariants}
     >
       <div className={styles.title}>

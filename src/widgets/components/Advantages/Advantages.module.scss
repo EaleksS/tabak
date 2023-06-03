@@ -22,6 +22,10 @@
     font-size: 100px;
     text-transform: uppercase;
     font-weight: 900;
+
+    @media (max-width: 700px) {
+      display: none;
+    }
   }
 
   .line {
@@ -40,13 +44,21 @@
 }
 
 .advantages {
-  padding-top: 100px;
+  padding-top: 100px !important;
 
   .items {
     margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 650px) {
+      grid-template-columns: 1fr;
+    }
 
     .item {
       background: #fff;

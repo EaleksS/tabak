@@ -32,7 +32,7 @@ export const Contacts: FC = (): JSX.Element => {
       id="contacts"
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={cardVariants}
     >
       <div className={styles.title}>

@@ -116,9 +116,9 @@ export const Preview: FC = (): JSX.Element => {
       </motion.div>
       <div className={styles.img}>
         <AnimatePresence>
-          {data.map((e) => (
+          {data.map((e, index) => (
             <motion.img
-              key={e.id}
+              key={index + 100}
               ref={e.ref}
               src="/img/2-6.png"
               alt="2"

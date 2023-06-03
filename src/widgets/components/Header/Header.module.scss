@@ -9,15 +9,19 @@
   z-index: 5;
 
   @media (max-width: 800px) {
-    flex-direction: column;
-    justify-content: center;
-    height: 150px;
-    gap: 1rem;
+    // flex-direction: column;
+    // justify-content: center;
+    // height: 150px;
+    // gap: 1rem;
   }
 
   a {
     color: #000;
     text-decoration: none;
+  }
+
+  button {
+    border-radius: 5px;
   }
 
   .logo {
@@ -44,6 +48,10 @@
     justify-content: space-between;
     width: 100%;
 
+    @media (max-width: 1200px) {
+      align-items: center;
+    }
+
     .phone {
       display: flex !important;
 
@@ -51,6 +59,7 @@
         // border: 2px solid transparent;
         border-bottom: 2px solid $gold;
         padding: 0 5px;
+        display: none;
 
         @media (min-width: 800px) {
           transition: all 0.2s ease-in-out;

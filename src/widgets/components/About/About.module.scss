@@ -28,6 +28,10 @@
       font-size: 100px;
       text-transform: uppercase;
       font-weight: 900;
+
+      @media (max-width: 700px) {
+        display: none;
+      }
     }
 
     .line {
