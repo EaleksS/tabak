@@ -10,11 +10,15 @@
     left: 0;
     right: 0;
     background: url("/img/1-2.jpg") no-repeat;
-    background-attachment: fixed;
+
     height: 100vh;
     background-position: center;
     background-size: cover;
     z-index: -1;
+
+    @media (min-width: 600px) {
+      background-attachment: fixed;
+    }
   }
 
   &::after {

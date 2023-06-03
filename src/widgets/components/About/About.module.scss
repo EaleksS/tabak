@@ -61,7 +61,10 @@
     background-size: cover;
     object-fit: cover;
     z-index: -1;
-    background-attachment: fixed;
+
+    @media (min-width: 600px) {
+      background-attachment: fixed;
+    }
   }
 
   &::after {
