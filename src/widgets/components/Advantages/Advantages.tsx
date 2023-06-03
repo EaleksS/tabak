@@ -24,8 +24,10 @@ export const Advantages: FC = (): JSX.Element => {
         </div>
         <div className={styles.item}>
           <img src="/img/tobaccos.svg" alt="tobaccos" />
-          <Text type="h3">Табак и добавки</Text>
-          <Text type="p5" mt="2rem">
+          <Text type="h3">
+            Табак и <br /> добавки
+          </Text>
+          <Text type="p5">
             Используем высокосортный цельнолистовой табак «Вирджиния» из Индии,
             натуральные компоненты и ароматизаторы, оптимально подходящие для
             изготовления жевательного табака.
