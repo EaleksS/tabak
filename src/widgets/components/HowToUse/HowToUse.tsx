@@ -1,10 +1,35 @@
 import { FC } from "react";
 import styles from "./HowToUse.module.scss";
 import { Text } from "../../../shared";
+import { Variants, motion } from "framer-motion";
+
+const cardVariants: Variants = {
+  offscreen: {
+    y: 100,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    rotate: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
 
 export const HowToUse: FC = (): JSX.Element => {
   return (
-    <div className={`${styles.how_to_use} wrapper`} id="howtouse">
+    <motion.div
+      className={`${styles.how_to_use} wrapper`}
+      id="howtouse"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.1 }}
+      variants={cardVariants}
+    >
       <div className={styles.title}>
         <Text type="h2">
           <span>КАК</span> ИСПОЛЬЗОВАТЬ?
@@ -46,6 +71,6 @@ export const HowToUse: FC = (): JSX.Element => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

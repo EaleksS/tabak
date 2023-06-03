@@ -7,10 +7,34 @@ import {
   FcCheckmark,
   FcDeployment,
 } from "react-icons/fc";
+import { Variants, motion } from "framer-motion";
+
+const cardVariants: Variants = {
+  offscreen: {
+    y: 100,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    rotate: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
 
 export const Advantages: FC = (): JSX.Element => {
   return (
-    <div className={`${styles.advantages} wrapper`}>
+    <motion.div
+      className={`${styles.advantages} wrapper`}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.1 }}
+      variants={cardVariants}
+    >
       <div className={styles.title}>
         <Text type="h2">
           Наши основные <span>преимущества</span>
@@ -64,6 +88,6 @@ export const Advantages: FC = (): JSX.Element => {
           </Text>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
