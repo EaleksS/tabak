@@ -90,7 +90,7 @@ export const Contacts: FC = (): JSX.Element => {
           </Text>
 
           <Text type="p3" mt="1rem" fw="400" color="#333">
-            tobacco-spb@yandex.ru
+            <a href="mailto:tobacco-spb@yandex.ru">tobacco-spb@yandex.ru</a>
           </Text>
           <Text type="p5" fw="500">
             Почта
