@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styles from "./Products.module.scss";
-import { Button, Text } from "../../../shared";
+import { Button, Text, useWindowDimensions } from "../../../shared";
 import { Card2 } from "../../../entities";
 import { useDocument } from "../../store/document.store";
 import { Link } from "react-scroll";
@@ -46,6 +46,7 @@ const data = [
 
 export const Products: FC = (): JSX.Element => {
   const { setIsActive } = useDocument();
+  const { width } = useWindowDimensions();
 
   return (
     <div className={`${styles.products} wrapper`} id="products">
@@ -73,9 +74,11 @@ export const Products: FC = (): JSX.Element => {
           <Link to="about" smooth={true}>
             <Button>Подробнее</Button>
           </Link>
-          <Button type="primary" onClick={() => setIsActive(true)}>
-            Документы
-          </Button>
+          {width > 700 && (
+            <Button type="primary" onClick={() => setIsActive(true)}>
+              Документы
+            </Button>
+          )}
         </div>
       </div>
     </div>
