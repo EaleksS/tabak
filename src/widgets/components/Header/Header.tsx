@@ -23,9 +23,9 @@ export const Header: FC = (): JSX.Element => {
         <Nav />
         <ul className={styles.phone}>
           <li>
-            <a href="#">
+            <a href="tel:+79522823823">
               <Text type="p2" color="#fff">
-                +7 (999) 999-99-99
+                +7 (952) 282-38-23
               </Text>
             </a>
           </li>

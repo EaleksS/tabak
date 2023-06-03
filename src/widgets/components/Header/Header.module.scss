@@ -59,7 +59,10 @@
         // border: 2px solid transparent;
         border-bottom: 2px solid $gold;
         padding: 0 5px;
-        display: none;
+
+        @media (max-width: 1200px) {
+          display: none;
+        }
 
         @media (min-width: 800px) {
           transition: all 0.2s ease-in-out;

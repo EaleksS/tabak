@@ -83,7 +83,7 @@ export const Contacts: FC = (): JSX.Element => {
       <div className={styles.container}>
         <div className={styles.informa}>
           <Text type="p3" fw="400">
-            <a href="#">+7 (952) 282-38-23</a>
+            <a href="tel:+79522823823">+7 (952) 282-38-23</a>
           </Text>
           <Text type="p4" fw="500">
             Телефон
