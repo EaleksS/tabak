@@ -21,6 +21,10 @@ export const Confirmation: FC = (): JSX.Element => {
     }
   }, [isActive]);
 
+  const closeTab = () => {
+    alert("Посещение сайта запрещено");
+  };
+
   return (
     <Modal
       isActive={isActive}
@@ -52,12 +56,16 @@ export const Confirmation: FC = (): JSX.Element => {
           </Text>
 
           <Text type="p5" mt="1rem">
-            <a href="#">перейти к законку</a>
+            <a href="http://www.consultant.ru/document/cons_doc_LAW_142515/">
+              перейти к законку
+            </a>
           </Text>
 
           <div className={styles.btns}>
             <Button onClick={() => setConfirm(true)}>мне есть 18 лет</Button>
-            <Button type="primary">мне нет 18 лет</Button>
+            <Button type="primary" onClick={() => closeTab()}>
+              мне нет 18 лет
+            </Button>
           </div>
         </div>
       </div>
