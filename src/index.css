@@ -9,3 +9,10 @@ button,
 input {
   font-family: "Open Sans", sans-serif;
 }
+
+@media (max-width: 800px) {
+  body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+}
