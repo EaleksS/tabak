@@ -31,7 +31,7 @@ export const Confirmation: FC = (): JSX.Element => {
       <div className={styles.confirmation}>
         <div className={styles.content}>
           <div style={{ textAlign: "center" }}>
-            <Text type="h2" fw="600" fz="2rem">
+            <Text type="h2" fw="600">
               МИНЗДРАВСОЦРАЗВИТИЯ РФ ПРЕДУПРЕЖДАЕТ: "КУРЕНИЕ ОПАСНО ДЛЯ ВАШЕГО
               ЗДОРОВЬЯ"
             </Text>
