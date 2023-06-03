@@ -4,5 +4,16 @@ import { About } from "./components/About/About";
 import { Contacts } from "./components/Contacts/Contacts";
 import { Products } from "./components/Products/Products";
 import { Documents } from "./components/Documents/Documents";
+import { HowToUse } from "./components/HowToUse/HowToUse";
+import { Advantages } from "./components/Advantages/Advantages";
 
-export { Layout, Preview, About, Contacts, Products, Documents };
+export {
+  Layout,
+  Preview,
+  About,
+  Contacts,
+  Products,
+  Documents,
+  HowToUse,
+  Advantages,
+};

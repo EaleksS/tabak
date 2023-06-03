@@ -49,3 +49,39 @@
     gap: 1rem;
   }
 }
+
+.block {
+  margin-top: 100px;
+  padding: 2rem;
+
+  background-image: linear-gradient(
+    to right bottom,
+    #0090f0,
+    #0088e1,
+    #007fd3,
+    #0177c5,
+    #036fb7
+  );
+  box-shadow: 0px 0px 8px 0px rgba($color: $gold, $alpha: 0.5);
+  border-radius: 10px;
+
+  p {
+    text-transform: none;
+    font-weight: 400;
+  }
+
+  .btns {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+
+    button {
+      border-radius: 5px;
+    }
+
+    // button:nth-child(2) {
+    //   border: 1px solid rgba($color: #fff, $alpha: 0.5);
+    //   background: transparent;
+    // }
+  }
+}
