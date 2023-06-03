@@ -1,11 +1,10 @@
 import { FC } from "react";
 import styles from "./HowToUse.module.scss";
 import { Text } from "../../../shared";
-import { TiArrowRight } from "react-icons/ti";
 
 export const HowToUse: FC = (): JSX.Element => {
   return (
-    <div className={`${styles.how_to_use} wrapper`}>
+    <div className={`${styles.how_to_use} wrapper`} id="howtouse">
       <div className={styles.title}>
         <Text type="h2">
           <span>КАК</span> ИСПОЛЬЗОВАТЬ?
@@ -39,9 +38,9 @@ export const HowToUse: FC = (): JSX.Element => {
           <Text type="p4" fw="20px">
             Убери использованный пакетик в верхнее отделение банки.
           </Text>
-          <button className={styles.view}>
+          {/* <button className={styles.view}>
             Подробнее <TiArrowRight className={styles.icon} />
-          </button>
+          </button> */}
           <div className={styles.btns}>
             <div className={styles.num}>03</div>
           </div>

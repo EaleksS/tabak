@@ -83,6 +83,10 @@
     display: flex;
     gap: 2rem;
 
+    a {
+      width: 100%;
+    }
+
     button {
       border-radius: 5px;
     }

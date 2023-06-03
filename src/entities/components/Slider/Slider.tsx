@@ -84,11 +84,11 @@ export const Slider: FC<Props> = ({ type }): JSX.Element => {
             onSlideChange={() => isActiceCardsD()}
             style={{ padding: "10px" }}
           >
-            {[1, 2, 3, 4, 5].slice(0, 8).map((e) => {
+            {[1, 2, 3, 4].slice(0, 8).map((e) => {
               return (
                 <SwiperSlide key={e}>
-                  <div onClick={() => setIsActive(true)}>
-                    <ImageCard url="https://arqtobacco.com/upload/medialibrary/6ca/syyur9yx40kwupdkj17vq18f5wv3fbji/09.png" />
+                  <div onClick={() => width > 700 && setIsActive(true)}>
+                    <ImageCard url={`/img/document/${e}.jpg`} />
                   </div>
                 </SwiperSlide>
               );
@@ -123,7 +123,7 @@ export const Slider: FC<Props> = ({ type }): JSX.Element => {
 
     case "documentsM":
       return (
-        <div className="slider_container">
+        <div className="slider_container" style={{ margin: 0 }}>
           <Swiper
             onSwiper={(s) => setSwiperCardsDocumentM(s)}
             slidesPerView={1}
@@ -133,11 +133,11 @@ export const Slider: FC<Props> = ({ type }): JSX.Element => {
             onSlideChange={() => isActiceCardsM()}
             style={{ padding: "10px" }}
           >
-            {[1, 2, 3, 4, 5].slice(0, 8).map((e) => {
+            {[1, 2, 3, 4].slice(0, 8).map((e) => {
               return (
                 <SwiperSlide key={e}>
-                  <div onClick={() => setIsActive(true)}>
-                    <ImageCard url="https://arqtobacco.com/upload/medialibrary/6ca/syyur9yx40kwupdkj17vq18f5wv3fbji/09.png" />
+                  <div className="simg">
+                    <ImageCard url={`/img/document/${e}.jpg`} />
                   </div>
                 </SwiperSlide>
               );

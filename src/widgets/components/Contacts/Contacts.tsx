@@ -82,17 +82,28 @@ export const Contacts: FC = (): JSX.Element => {
 
       <div className={styles.container}>
         <div className={styles.informa}>
-          <Text type="p2" fw="400">
-            <a href="#">+7 (931) 333-34-44</a>
+          <Text type="p3" fw="400">
+            <a href="#">+7 (952) 282-38-23</a>
           </Text>
           <Text type="p4" fw="500">
             Телефон
           </Text>
-          <Text type="p2" mt="2rem" fw="400">
-            <a href="#">sales@rushgroup.pro</a>
+
+          <Text type="p3" mt="1rem" fw="400" color="#333">
+            tobacco-spb@yandex.ru
           </Text>
-          <Text type="p4" fw="500">
+          <Text type="p5" fw="500">
             Почта
+          </Text>
+
+          <Text type="p3" mt="1rem" fw="400" color="#333">
+            ООО Афина ИНН 7816733929
+          </Text>
+          <Text type="p3" mt=".5rem" fw="400" color="#333">
+            192236, г Санкт-Петербург, ул Белы Куна, Д 32
+          </Text>
+          <Text type="p5" fw="500">
+            Адрес
           </Text>
         </div>
         <div className={styles.map}>

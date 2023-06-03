@@ -33,9 +33,9 @@ export const Nav: FC<Props> = ({ setIsActive }): JSX.Element => {
         </Link>
       </li>
       <li>
-        <Link to="productions" smooth={true} onClick={close}>
+        <Link to="howtouse" smooth={true} onClick={close}>
           <Text type="p2" color="#fff">
-            Оптовая продажа
+            КАК ИСПОЛЬЗОВАТЬ?
           </Text>
         </Link>
       </li>

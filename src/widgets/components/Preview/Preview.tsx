@@ -2,6 +2,7 @@ import { FC, useEffect, useRef } from "react";
 import styles from "./Preview.module.scss";
 import { Button, Text } from "../../../shared";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 export const Preview: FC = (): JSX.Element => {
   const img1 = useRef<HTMLImageElement>(null);
@@ -108,11 +109,13 @@ export const Preview: FC = (): JSX.Element => {
           применением инновационных
           <br /> технологий и лучших сортов табака
         </Text>
-        <Button mt="3rem">
-          <Text type="p2" color="#fff">
-            подробнее
-          </Text>
-        </Button>
+        <Link to="products" smooth={true}>
+          <Button mt="3rem">
+            <Text type="p2" color="#fff">
+              продукция
+            </Text>
+          </Button>
+        </Link>
       </motion.div>
       <div className={styles.img}>
         <AnimatePresence>
@@ -120,7 +123,7 @@ export const Preview: FC = (): JSX.Element => {
             <motion.img
               key={index + 100}
               ref={e.ref}
-              src={`/img/2-${6 + index}m.png`}
+              src={`/img/card/c${index + 1}.png`}
               alt="2"
               className={e.css}
               initial={{ opacity: 0, marginTop: "200px" }}

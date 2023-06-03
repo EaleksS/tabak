@@ -48,6 +48,17 @@ body {
   object-fit: cover;
 }
 
+.simg {
+  padding: 0 !important;
+  margin: 0 !important;
+
+  img {
+    height: 100vh;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
 .swiper-pagination {
   position: sticky !important;
   transform: translateY(10px);
