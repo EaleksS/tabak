@@ -32,6 +32,22 @@
     }
   }
 
+  h3 {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      to right bottom,
+      #0090f0,
+      #0088e1,
+      #007fd3,
+      #0177c5,
+      #036fb7
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: table;
+    font-weight: 900;
+  }
+
   .info {
     position: absolute;
     bottom: 1rem;
@@ -39,6 +55,8 @@
 
     display: flex;
     gap: 1rem;
+
+
 
     .g {
       width: 70px;
